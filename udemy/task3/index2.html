@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 5%;
+        }
+
+        #box1 {
+            width: 200px;
+            height: 300px;
+            background-color: red;
+        }
+
+        #box2 {
+            width: 200px;
+            height: 300px;
+            background-color: blue;
+
+        }
+
+
+        #box3 {
+            width: 200px;
+            height: 300px;
+            background-color: cyan;
+            color: black;
+            text-align: center;
+            /* padding-top: 11%;
+            padding-bottom: 11%; */
+
+        }
+
+
+        #box4 {
+            width: 200px;
+            height: 300px;
+            background-color: green;
+        }
+
+        .col-md-6 {
+            text-align: center;
+            color: cornsilk;
+            margin: 1px 0px 10px 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" id="box3">
+                <h1>3</h1>
+                <h5 id="show"></h5>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6  col-xs-6" id="box1" onclick="box3()">
+                <h1>1</h1>
+                <h5>Click Me!!!</h5>
+            </div>
+
+            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" id="box2">
+                <h1>2</h1>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"  onclick="box2()" id="box4">
+                <h1>4</h1>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let i = 0;
+        window.onload = function () { alert("Show"); }
+
+        function box3() {
+            document.getElementById('show').innerHTML = "OOPS Something Went Wrong!";
+        }
+
+        function box4() {
+            let color = ["purple", "orange", "yellow"]
+            console.log(color);
+
+            if (i > color.length)
+                i = 0;
+            document.getElementById('box4').style.background = color[i];
+            i++;
+        }
+        setInterval(box4, 5000)
+
+
+
+
+        function box2() {
+            let color = ["purple", "orange", "yellow"]
+            console.log(color);
+
+            if (i > color.length)
+                i = 0;
+            document.getElementById('box2').style.background = color[i];
+            i++;
+        }
+        setInterval(box4, 3000)
+        // setInterval(
+        //     function () {
+        //         var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        //         document.getElementById('box2').style.backgroundColor = "#" + randomColor;
+        //     }, 3000);
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

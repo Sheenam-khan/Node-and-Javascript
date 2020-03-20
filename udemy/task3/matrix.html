@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let edges=[];
+        n=3;
+    for(let i=0;i<n;i++){
+      for(let j=0;j<n-1;j++){
+        obj={
+          id:`N${i}-${j}`,
+          source:`N${i}-${j}`,
+          target:`N${i}-${j+1}`
+        };
+        let content={
+          data:obj
+        };
+        edges.push(content);
+      }
+    }
+    
+    for(let i=0;i<n;i++){
+      for(let j=n-1; j>0;j--){
+        obj={
+          id:`${i}-${j}`,
+          source:`N${i}-${j}`,
+          target:`N${i}-${j-1}`
+        };
+        let content={
+          data:obj
+        };
+        edges.push(content);
+      }
+    }
+ 
+
+    for(let i=0;i<n-1;i++){
+      for(let j=0; j<n;j++){
+        obj={
+          id:`${i}-${j}`,
+          source:`N${i}-${j}`,
+          target:`N${i+1}-${j}`
+        };
+        let content={
+          data:obj
+        };
+        edges.push(content);
+      }
+    }
+
+    for(let i=0;i<n-1;i++){
+      for(let j=0; j<n-1;j++){
+        obj={
+          id:`${i}-${j}`,
+          source:`N${i}-${j}`,
+          target:`N${i+1}-${j+1}`
+        };
+        let content={
+          data:obj
+        };
+        edges.push(content);
+      }
+    }
+    for(let i=0;i<n-1;i++){
+      for(let j=0; j<n-1;j++){
+        obj={
+          id:`${i}-${j}`,
+          source:`N${i}-${j+1}`,
+          target:`N${i+1}-${j}`
+        };
+        let content={
+          data:obj
+        };
+        edges.push(content);
+      }
+    }
+ 
+    </script>
+</body>
+</html>
