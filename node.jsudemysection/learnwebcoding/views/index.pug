@@ -1,0 +1,23 @@
+html
+head
+title=title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+body
+div(class="Container")
+<center><div class='well'><b>User Details</b></div></center>
+table(class='table_format.table.table-bordered.table-striped.table-hover.table-list-search',style='width:100%', border='1')
+
+        tr
+            th First Name
+            th Last Name
+            th #
+each item in items
+        tr 
+          td=item.fname
+          td=item.lname
+   
+  
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+
+
